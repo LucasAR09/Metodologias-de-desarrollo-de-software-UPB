@@ -1,4 +1,4 @@
-# Comandos Git - Lucas Acevedo
+# Comandos Git - SebastianCaicedo
 
 ## 1. Crear nueva rama local:
 ```bash
