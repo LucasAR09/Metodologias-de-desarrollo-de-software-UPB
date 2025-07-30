@@ -1,1 +1,5 @@
-print ("Hola mundo")
+from backend.cliente import listarClientes
+
+clientes = listarClientes()
+
+print(clientes)
