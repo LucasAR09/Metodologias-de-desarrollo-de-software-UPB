@@ -1,4 +1,5 @@
 from backend.hoja_producto import obtenerHojaDeProductos
+from backend.excel import guardarHoja
 
 hoja = obtenerHojaDeProductos()
 
@@ -26,3 +27,13 @@ def consultarProducto(id_producto):
             return valores
     else:
         return None
+
+def crearProducto(Id, Nombre, Precio, Cantidad):
+    if consultarProducto(Id) is not None:
+        return False
+    
+    producto = (Id, Nombre, Precio, Cantidad)
+    hoja.append(producto)
+    guardarHoja(hoja)
+    
+    return True    
